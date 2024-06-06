@@ -31,7 +31,7 @@ void norm(int &n, int mod)
     }
 }
 
-int num_pow_div(int n, int pow, int mod)
+int modular_exponentation(int n, int pow, int mod)
 {
     // prima rinomalizzazione
     n %= mod;
@@ -75,14 +75,15 @@ int trovare_soluz_sistema(int resto1, int resto2, int mod1, int mod2)
     return x;
 }
 
-int trovare_soluz_rsa(int pow, int mod)
+int modInverse(int pow, int mod)
 {
-    int i=0;
-    while (((i*pow) % mod) != 1)
+    int res=pow, inverse=1;
+    while ((res % mod) != 1)
     {
-        i++;
+        res = res + pow;
+        inverse++;
     }
-    return i;
+    return inverse;
 }
 
 int phi_function(int mod)

@@ -32,9 +32,9 @@ void rsa_exercise(int pow, int resto, int mod)
     int phi, d, res;
     if(applicabilità_rsa(pow, resto, mod, phi)){
         //d = esponente a cui bisogna elevare il resto
-        d = trovare_soluz_rsa(pow, phi);
+        d = modInverse(pow, phi);
         
-        res = num_pow_div(resto, d, mod);
+        res = modular_exponentation(resto, d, mod);
         // cout<<d<<endl;
     }else{
         cout<<"Non è possibile risolvere questo rsa"<<endl;
@@ -47,5 +47,5 @@ void rsa_exercise(int pow, int resto, int mod)
 }
 
 void pow_div(int num, int pow, int mod){
-    cout<<num_pow_div(num, pow, mod);
+    cout<<modular_exponentation(num, pow, mod);
 }
