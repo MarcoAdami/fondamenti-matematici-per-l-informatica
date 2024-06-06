@@ -5,15 +5,13 @@ using namespace std;
 
 int main()
 {
-    // (creare un file input_sistema.txt se non esiste)
-    // scrivere in input_sistema.txt solo i numeri del sistema tipo:
+    // scrivere in input_sistema.txt solo i numeri del sistema, tipo:
     // 20 66 8 171 ==> x=20(mod 66) x=8(mod 171)
     // risolve solo una congruenza
 
-    // (creare un file input_rsa.txt se non esiste)
     // scrivere in  input_rsa.txt in cui scrivere solo i numeri della congruenza
     // 9 4 205 ==> x^9 = 4(mod 205) ==>
-        // risolve solo una congruenza
+    // risolve solo una congruenza
 
        
 
